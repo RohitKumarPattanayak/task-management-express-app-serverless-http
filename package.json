@@ -1,0 +1,40 @@
+{
+  "name": "rest_api_assignment",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://rishabhajay24@bitbucket.org/spurtreetech/stp_10233_sttepup2022_node_groupa.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://bitbucket.org/spurtreetech/stp_10233_sttepup2022_node_groupa/issues"
+  },
+  "homepage": "https://bitbucket.org/spurtreetech/stp_10233_sttepup2022_node_groupa#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-basic-auth": "^1.2.1",
+    "express-validator": "^6.14.3",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "mongoose": "^6.5.2",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "nanoid": "^4.0.1",
+    "nodemon": "^2.0.20",
+    "swagger-jsdoc": "^6.2.5",
+    "swagger-ui-express": "^4.5.0",
+    "uuid": "^8.3.2"
+  }
+}
