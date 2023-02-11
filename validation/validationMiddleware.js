@@ -9,7 +9,7 @@ const validation = (req, res, next) => {
     }
     next();
   } catch (error) {
-    return res.json({
+    return res.status(error.code).json({
       Error: {
         code: error.code,
         message: error.message,

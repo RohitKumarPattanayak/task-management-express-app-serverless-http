@@ -27,9 +27,10 @@ export const post_user_tasks = (req, res) => {
   const { title, desc } = req.body;
   try {
     let result = post_new_task(title, desc);
-    return res.json(result);
+    return res.status(201).json(result);
   } catch (error) {
-    return res.json({
+    console.log("inside error");
+    return res.status(error.code).json({
       Error: {
         code: error.code,
         message: error.message.message,
@@ -43,9 +44,9 @@ export const put_user_task = (req, res) => {
   const { title, desc } = req.body;
   try {
     let result = update_task_by_id(id, title, desc);
-    return res.json(result);
+    return res.status(201).json(result);
   } catch (error) {
-    return res.json({
+    return res.status(error.code).json({
       Error: {
         code: error.code,
         message: error.message,
@@ -59,9 +60,9 @@ export const patch_user_task = (req, res) => {
   const body = req.body;
   try {
     let result = patch_task_by_id(id, body);
-    return res.json(result);
+    return res.status(201).json(result);
   } catch (error) {
-    return res.json({
+    return res.status(error.code).json({
       Error: {
         code: error.code,
         message: error.message,
@@ -74,9 +75,9 @@ export const delete_user_task = (req, res) => {
   const { id } = req.params;
   try {
     let result = delete_task_by_id(id);
-    return res.json(result);
+    return res.status(200).json(result);
   } catch (error) {
-    return res.json({
+    return res.status(error.code).json({
       Error: {
         code: error.code,
         message: error.message,
