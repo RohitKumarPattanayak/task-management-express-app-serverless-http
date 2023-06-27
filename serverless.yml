@@ -1,0 +1,24 @@
+service: task-management-express-app
+
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  stage: dev
+  region: ${env:AWS_REGION}
+  runtime: nodejs18.x
+
+useDotenv: true
+
+functions:
+  app: # Function named "app"
+    handler: index.slsHttp # Reference the exported "server" method from the "AppJS" file
+    events: # lambda functions are triggered by events
+      - http: #event trigger for the root route of an API Gateway HTTP  "/"
+          path: /
+          method: ANY # Any HTTP method is excepted
+          cors: true # CORS enabler
+      - http: #event trigger for the root route of an API Gateway HTTP  "/"
+          path: /{any+}
+          method: ANY # Any HTTP method is excepted
+          cors: true # CORS enabler

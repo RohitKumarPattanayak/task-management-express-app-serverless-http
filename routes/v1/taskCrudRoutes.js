@@ -51,7 +51,7 @@ const router = express.Router();
  *             example:
  *                {"data":[{"id":1,"title":"rohit","desc":"rohit ka punchnama"}]}
  */
-router.get("", getTasksValidation, validation, get_user_tasks);
+router.get("/", getTasksValidation, validation, get_user_tasks);
 
 /**
  * @openapi
@@ -110,7 +110,7 @@ router.get("", getTasksValidation, validation, get_user_tasks);
  *             example:
  *                {"Error":{"code":403,"message":"validation Error."}}
  */
-router.post("", postTaskValidation, validation, post_user_tasks);
+router.post("/", postTaskValidation, validation, post_user_tasks);
 /**
  * @openapi
  * components:
